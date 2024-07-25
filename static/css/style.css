@@ -1,0 +1,479 @@
+/* Set box model, margins, and padding for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* FONT of the page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3faff !important;
+}
+
+/* Main colors of the business website */
+body {
+    --color1: #FFF;
+    --color2: rgba(8, 52, 74, 0.96);
+}
+
+/* Style for section */
+section {
+    text-align: center;
+}
+
+/* Style for invisible block */
+.invisible-block {
+    height: 60px;
+}
+
+/* NAV BAR */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    background-color: var(--color2);
+    padding: 12px 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width: 850px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+/* CAROUSEL */
+.testimonial-area {
+    width: 500px;
+    margin: 0 auto;
+    padding: 80px 0;
+    background-size: cover;
+    background-position: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.content p {
+    color: #6f6b80;
+    width: 60%;
+    margin: auto;
+}
+
+.person {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #005582;
+    margin-top: 50px;
+}
+
+.person img {
+    width: 100%;
+}
+
+.content h5 {
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+.carousel-indicators {
+    bottom: -80px !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 60px !important;
+    height: 10px !important;
+    background-color: #005582 !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-header p {
+        width: 85%;
+    }
+
+    .content p {
+        width: 95%;
+    }
+}
+
+@media (max-width: 767px) {
+    .testimonial-area {
+        padding: 30px 0;
+    }
+
+    .section-header p {
+        width: 95%;
+    }
+
+    .content p {
+        width: 100%;
+    }
+}
+
+/* POPOVER */
+.info-trigger {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.info-trigger:hover {
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+/* IMAGE of POPOVER*/
+.round-image {
+    width: 2cm;
+    height: 2cm;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.round-image-container {
+    text-align: center;
+}
+
+/* FORM */
+/* Style of the CONTAINER of the form */
+#formularioContainer {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style to make the fields appear in a VERTICAL MODE */
+#formularioContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* MARGIN of the labels of the form */
+#formularioContacto label {
+    margin-bottom: 1px;
+}
+
+/* Style for the FIELDS of the form */
+#formularioContacto input,
+#formularioContacto textarea {
+    border: 0.1px solid #cccccc;
+    padding: 8px;
+    transition: border-color 0.5s ease;
+}
+
+/* CHANGE COLOR of the border when the mouse passes over the field */
+#formularioContacto input:hover,
+#formularioContacto textarea:hover {
+    border-color: #87CEEB;
+}
+
+/* Style when CLICKING a contact us field*/
+#formularioContacto input:focus,
+#formularioContacto textarea:focus {
+    border-color: #000;
+    border-width: 0.01px;
+}
+
+/* Style for CAPTCHA field (not implemented yet) */
+.g-recaptcha {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Style for the Contact Us BUTTON */
+#formularioContacto button {
+    border: 0.5px solid #007BFF;
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+
+/* Style of the contact us button on mouse hover */
+#formularioContacto button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+}
+
+/* Style for Contact Us transition */
+.contact-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.contact-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style for Nuestros servicios transition */
+.section-title {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    padding: 10px;
+}
+
+.container.py-4 {
+    display: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.container.py-4.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popover-servicios {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Nuestros servicios */
+.contenedor-servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para botón de inicio */
+.scroll-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para transición de nuestros clientes */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Quienes Somos */
+.mov-quienes-somos-titulos {
+    width: 100%;
+    height: 4cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mov-izquierda {
+    width: 8.5cm;
+    padding: 37.8px;
+    justify-content: center;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-right: 5px solid var(--color2);
+}
+
+.mov-derecha {
+    width: 8.5cm;
+    padding: 37.8px;
+    justify-content: center;
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-left: 5px solid var(--color2);
+}
+
+.quienes-somos-bloque-invisible {
+    width: calc(100vw - 8 * 37.8px);
+}
+
+.container-quienes-somos-mision {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/background/background1.jpg');
+    background-attachment: fixed;
+}
+
+.container-quienes-somos-vision {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/background/background4.jpeg');
+    background-attachment: fixed;
+}
+
+.container-quienes-somos-profesionales {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/background/background3.jpg');
+    background-attachment: fixed;
+}
+
+/* Nuestros servicios background image */
+.seccion-servicios {
+    width: 100% !important;
+    height: 100vh !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-image: url('../images/background/background8.jpeg');
+    background-attachment: fixed !important;
+}
+
+.linea-separadora {
+    background-color: rgb(186, 167, 62);
+    height: 1mm;
+    width: 100%;
+}
+
+/* Nuestros clientes background */
+.container-clientes {
+    width: 100% !important;
+    height: 100vh !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-image: url('../images/background/background6.jpg');
+    background-attachment: fixed !important;
+}

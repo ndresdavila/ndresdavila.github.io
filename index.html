@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- meta tags-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- title -->
+        <title>Masterview</title>
+        <!-- CSS files -->
+        <link rel="stylesheet" href="static/css/style.css">
+        <!-- CSS file for hamburger navbar-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- CSS file for popovers -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!--CSS for carousel-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!--captcha script-->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!--javascript file-->
+        <script src="static/js/scripts.js"></script>
+        <!--javascript ScrollReveal-->
+        <script src="static/js/scrollreveal.js"></script>
+        <scrip src="static/js/index.js"></scrip>
+    </head>
+
+    <body>
+
+        <!--navbar-->
+        <header id="navbar">
+            <nav>
+                <!--unordered list for every item of the navbar-->
+                <ul class="nav-bar">
+                    <!--logo-->
+                    <li class="logo">
+                        <a href="#">
+                            <img src="static/images/logo.png" alt="logo">
+                        </a>
+                    </li>
+                    <!--checkbox used for opening and closing the hamburger type navbar menu-->
+                    <input type="checkbox" id="check">
+                    <span class="menu">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nuestros-clientes">Nuestros Clientes</a></li>
+                        <li><a href="#quienes-somos">Quienes Somos</a></li>
+                        <li><a href="#nuestros-servicios">Nuestros Servicios</a></li>
+                        <li><a href="#contactenos">Contactenos</a></li>
+                        <label for="check" class="close-menu"><i class="fas fa-times"></i></label> <!--icon for closing navbar-->
+                    </span>
+                    <label for="check" class="open-menu"><i class="fas fa-bars"></i></label> <!--icono for opening navbar-->
+                </ul>
+            </nav>
+        </header>
+
+        <!--Inicio-->
+        <section id="inicio" style="position: relative; background-image: url('static/images/background/background0.jpg'); background-size: cover; background-position: center; color: white; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-attachment: fixed;
+        ">
+            <!--invisible block so the menu at the top does not hide the title of the section-->
+            <div class="invisible-block"></div>
+            <!-- Logo with shadow -->
+            <img class="logo-home" src="static/images/logo.png" style="width: 200px; filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));" alt="logo">
+            <div class="invisible-block"></div>
+            <h1>Masterview</h1>
+            <h4 style="text-align: center;">Lorem ipsum dolor sit amet.</h4>
+            <!-- Arrow to go to the next section -->
+            <a href="#nuestros-clientes" class="scroll-arrow">
+                <i class="fas fa-chevron-down fa-2x"></i>
+            </a>
+        </section>
+        
+        <div class="linea-separadora"></div>
+
+        <!--Nuestros Clientes: carousel showing past clients of the business-->
+        <div class="container-clientes">
+            <section id="nuestros-clientes" class="fade-in-section">
+                <div>
+                    <br><br><br>
+                    <div class="invisible-block"></div>
+                    <div class="testimonial-area">
+                        <h2>Nuestros Clientes</h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="carousel slide" data-bs-ride="true" id="carouselExampleIndicators">
+                                        <div class="carousel-indicators">
+                                            <button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 6" data-bs-slide-to="5" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 7" data-bs-slide-to="6" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 8" data-bs-slide-to="7" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 9" data-bs-slide-to="8" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                            <button aria-label="Slide 10" data-bs-slide-to="9" data-bs-target="#carouselExampleIndicators" type="button"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <!--Client 1-->
+                                            <div class="carousel-item active">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/andinave.png"></div>
+                                                    <h5>Andinave S.A.</h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 2-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/hansamaritime.jpg"></div>
+                                                    <h5>Hansamaritime S.A.</h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 3-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Marglobal S.A. </h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 4-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Cliente 4 S.A. </h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 5-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Cliente 4 S.A. </h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 6-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Cliente 4 S.A. </h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 7-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Cliente 4 S.A. </h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 8-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Cliente 4 S.A. </h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 9-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Cliente 4 S.A. </h5>
+                                                    <h6>SServicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!--Client 10-->
+                                            <div class="carousel-item">
+                                                <div class="content text-center">
+                                                    <div class="person"><img alt="" src="static/images/clients/marglobal.png"></div>
+                                                    <h5>Cliente 4 S.A. </h5>
+                                                    <h6>Servicios ofrecidos al cliente</h6>
+                                                    <p>
+                                                        Off-hire bunker<br>
+                                                        Condition survey<br>
+                                                        Draught survey<br>
+                                                        Holds Inspection<br>
+                                                        Bunker survey<br>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="invisible-block"></div>
+                </div>
+                
+            </section>
+        </div>
+
+        <div class="linea-separadora"></div>
+
+        <!--Quienes Somos: mission, vision and staff of the business-->
+        <section id="quienes-somos">
+
+        <!--mision-->
+        <div class="container-quienes-somos-mision">
+            <!--text-->
+            <div class="mov-izquierda quienes-somos-texto" style="height: 100vh;">
+                <h3 class="mov-quienes-somos-titulos">Mision</h3><br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+
+        <!--vision-->
+        <div class="container-quienes-somos-vision">
+            <!--para dejar espacio-->
+            <div class="quienes-somos-bloque-invisible"></div>
+            <!--texto-->
+            <div class="mov-derecha quienes-somos-texto" style="height: 100vh;">
+                <h3 class= "mov-quienes-somos-titulos">Vision</h3><br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+
+        <!--parrafo 3-->
+        <!--profesionales-->
+        <div class="container-quienes-somos-profesionales">
+            <!--texto-->
+            <div class="mov-izquierda quienes-somos-texto" style="height: 100vh;">
+                <h3 class="mov-quienes-somos-titulos">Tenemos a los mejores profesionales</h3><br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+        </section>
+        
+        <div class="linea-separadora"></div>
+
+        <!--Nuestros Servicios: set of popovers that, when clicked, show the description of said service-->
+        <section id="nuestros-servicios" class="seccion-servicios">
+            <!--invisible block so the menu at the top does not hide the title of the section-->
+            <div class="invisible-block"></div>
+
+            <h2 class="section-title quienes-somos-titulos">Nuestros Servicios</h2>
+            <br><br>
+
+            <!--Popover for each service-->
+            <div class="contenedor-servicios">
+                <div class="popover-servicios container py-4 d-flex justify-content-center align-items-center">
+                    <img src="static/images/services/auditorias.png" alt="Auditorías" class="round-image" alt="Auditorías" style="width: 75.6px !important; height: 75.6px !important; border: 5px solid #005582 !important; border-radius: 50% !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; transition: box-shadow 0.3s !important;" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom" title="Auditorías" data-bs-content='
+                        <div class="round-image-container"><img src="static/images/photo1.jpg" alt="Image" class="round-image"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    '>
+                    <h5>Auditorias</h5>
+                </div>
+    
+                <div class="popover-servicios container py-4 d-flex justify-content-center align-items-center">
+                    <img src="static/images/services/apoyo-administradoras.png" alt="Apoyo a Administradoras" class="round-image" alt="Apoyo a Administradoras" style="width: 75.6px !important; height: 75.6px !important; border: 5px solid #005582 !important; border-radius: 50% !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; transition: box-shadow 0.3s !important;" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom" title="Apoyo a Administradoras" data-bs-content='
+                        <div class="round-image-container"><img src="static/images/photo1.jpg" alt="Image" class="round-image"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    '>
+                    <h5>Apoyo a Administradoras</h5>
+                </div>
+    
+                <div class="popover-servicios container py-4 d-flex justify-content-center align-items-center">
+                    <img src="static/images/services/inspecciones.png" alt="Inspecciones" class="round-image" alt="Inspecciones" style="width: 75.6px !important; height: 75.6px !important; border: 5px solid #005582 !important; border-radius: 50% !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; transition: box-shadow 0.3s !important;" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom" title="Inspecciones" data-bs-content='
+                        <div class="round-image-container"><img src="static/images/photo1.jpg" alt="Image" class="round-image"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    '>
+                    <h5>Inspecciones</h5>
+                </div>
+            </div>
+            <br><br>
+            <div class="contenedor-servicios">
+                <div class="popover-servicios container py-4 d-flex justify-content-center align-items-center">
+                    <img src="static/images/services/actividades-maritimas.png" alt="Actividades Marítimas" class="round-image" alt="Actividades Marítimas" style="width: 75.6px !important; height: 75.6px !important; border: 5px solid #005582 !important; border-radius: 50% !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; transition: box-shadow 0.3s !important;" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom" title="Actividades Marítimas" data-bs-content='
+                        <div class="round-image-container"><img src="static/images/photo1.jpg" alt="Image" class="round-image"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    '>
+                    <h5>Actividades Marítimas</h5>
+                </div>
+    
+                <div class="popover-servicios container py-4 d-flex justify-content-center align-items-center">
+                    <img src="static/images/services/marine.png" alt="Actividades Náuticas" class="round-image" alt="Actividades Náuticas" style="width: 75.6px !important; height: 75.6px !important; border: 5px solid #005582 !important; border-radius: 50% !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; transition: box-shadow 0.3s !important;" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom" title="Actividades Náuticas" data-bs-content='
+                        <div class="round-image-container"><img src="static/images/photo1.jpg" alt="Image" class="round-image"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    '>
+                    <h5>Actividades Náuticas</h5>
+                </div>
+    
+                <div class="popover-servicios container py-4 d-flex justify-content-center align-items-center">
+                    <img src="static/images/services/complementary.png" alt="Servicios Complementarios" class="round-image" alt="Servicios Complementarios" style="width: 75.6px !important; height: 75.6px !important; border: 5px solid #005582 !important; border-radius: 50% !important; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; transition: box-shadow 0.3s !important;" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom" title="Servicios Complementarios" data-bs-content='
+                        <div class="round-image-container"><img src="static/images/photo1.jpg" alt="Image" class="round-image"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    '>
+                    <h5>Servicios Complementarios</h5>
+                </div>
+            </div>
+
+        </section>
+
+        <!--Contactenos: contact form that stores the data entered by the user in a sql database-->
+        <section id="contactenos" class="contact-section">
+            <!--invisible block so the menu at the top does not hide the title of the section-->
+            <div class="invisible-block"></div>
+            <h2 class="quienes-somos-titulos">Contactenos</h2>
+            <br><br>
+            <div id="formularioContainer">
+                <form id="formularioContacto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" required autocomplete="off">
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" required autocomplete="off">
+
+                    <label for="telefono">Telefono:</label>
+                    <input type="tel" name="telefono" required autocomplete="off">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" required autocomplete="off"></textarea>
+
+                    <!-- TODO: inicia sesion en RECAPTCHA para obtener tu clave-->
+                    <!--<div class="g-recaptcha" data-sitekey="TU_CLAVE_DE_SITIO_RECAPTCHA"></div>-->
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <!--footer-->
+        <footer style="text-align: center;">
+            <p>&copy; Masterview. Todos los derechos reservados.</p>
+        </footer>
+
+        <!--scripts-->
+        <script src="static/js/scripts.js"></script>
+        <!--scripts para carrusel de clientes-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!--script de index.js de ScrollReveal-->
+        <script src="static/js/index.js"></script>
+    </body>
+</html>
